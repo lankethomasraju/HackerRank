@@ -1,0 +1,14 @@
+import sys
+from collections import Counter
+
+if __name__ == '__main__':
+    s = input()
+   
+    char_counts = Counter(s).items()
+
+   
+    sorted_counts = sorted(char_counts, key=lambda x: (-x[1], x[0]))
+
+    
+    for char, count in sorted_counts[:3]:
+        print(char, count)
