@@ -1,0 +1,15 @@
+def split_and_join(line):
+  # Split the input string 'line' by the space delimiter (" ")
+  # and store the resulting list of words in a variable (e.g., words_list)
+  words_list = line.split(" ")
+  
+  # Join the elements of the 'words_list' using a hyphen ("-") as the separator
+  joined_string = "-".join(words_list)
+  
+  # Return the final modified string
+  return joined_string
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
