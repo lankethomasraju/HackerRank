@@ -1,0 +1,8 @@
+import re
+n = int(input())
+lines = [input() for _ in range(n)]
+pattern = r'(?<= )(&&|\|\|)(?= )'
+def repl(match):
+    return 'and' if match.group(0) == '&&' else 'or'
+for line in lines:
+    print(re.sub(pattern, repl, line))
